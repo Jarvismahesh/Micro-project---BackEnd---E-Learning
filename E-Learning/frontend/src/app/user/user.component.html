@@ -1,0 +1,33 @@
+
+   
+<div class="container mt-4"><div class="terminal responsive">
+    <div class="justify-content-center">
+        <div class="container justify-content-center">
+            <table class="table text-center  table-striped" style="border-color:white;font-size: medium;">
+                <tr class="table-group-divider border border-white bg-light text-black" style="height: 3em;">
+                    <th>UserID</th>
+                    <th>MailID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Type</th>
+                    <th>Password</th>
+                    <th><a routerLink="/EditUser" class="btn btn-success" ><i class="fa fa-edit"></i>&ensp;Edit</a></th>
+                    <th><a routerLink="/DeleteUserData" class="btn btn-danger"><i class="fa fa-trash"></i>&ensp;Delete</a></th>
+                </tr>
+
+                <tr *ngFor="let pc of userList" class="mt-5 border border-white" style="height: 5em;">
+                    <td>{{pc.userId}}</td>
+                    <td>{{pc.userMailId}}</td>
+                    <td>{{pc.userFirstName}}</td>
+                    <td>{{pc.userLastName}}</td>
+                    <td>{{pc.userType}}</td>
+                    <td>{{pc.userPassword}}</td>
+                   
+                </tr>
+
+            </table>
+            <p></p>
+            <p></p>
+        </div>
+
+    

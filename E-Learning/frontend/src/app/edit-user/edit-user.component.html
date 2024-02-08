@@ -1,0 +1,141 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2 w-75 strong card-registration" style="border-radius: 15px;">
+
+          <div class="card-body p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Edit User</h3>
+            <form [formGroup]="edituserForm">
+
+              <div class="row">
+                <div class="col mb-4">
+
+                  <div class="form-outline">
+                    <label class="form-label">User Id</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="userId" />
+
+
+                    <div *ngIf="edituserForm.get('userId')!.touched && edituserForm.get('userId')!.invalid">
+                      <div *ngIf="edituserForm.get('userId')!.hasError('required')">
+
+                        <font color="red">*Id is Required</font>
+                      </div>
+                      <div *ngIf="edituserForm.get('userId')!.hasError('pattern')">
+                        <font color="red">*Invalid ID </font>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-4">
+
+                  <div class="form-outline">
+                    <label class="form-label">User First Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="userFirstName" />
+
+                    <div
+                      *ngIf="edituserForm.get('userFirstName')!.touched && edituserForm.get('userFirstName')!.invalid">
+                      <div *ngIf="edituserForm.get('userFirstName')!.hasError('required')">
+
+                        <font color="red">*Name is Required</font>
+                      </div>
+                      <div *ngIf="edituserForm.get('userFirstName')!.hasError('pattern')">
+                        <font color="red">*Invalid Name </font>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-4">
+                  <div class="form-outline">
+
+                    <label class="form-label">User Last Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="userLastName" />
+                    <div *ngIf="edituserForm.get('userLastName')!.touched && edituserForm.get('userLastName')!.invalid">
+                      <div *ngIf="edituserForm.get('userLastName')!.hasError('required')">
+
+                        <font color="red">*Name is Required</font>
+                      </div>
+                      <div *ngIf="edituserForm.get('userLastName')!.hasError('pattern')">
+                        <font color="red">*Invalid Name</font>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col mb-4">
+                  <div class="form-outline">
+                    <label class="form-label">Mail Id</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="userMailId" />
+
+
+                    <div *ngIf="edituserForm.get('userMailId')!.touched && edituserForm.get('userMailId')!.invalid">
+                      <div *ngIf="edituserForm.get('userMailId')!.hasError('required')">
+
+                        <font color="red">*Mail is Required</font>
+                      </div>
+                      <div *ngIf="edituserForm.get('userMailId')!.hasError('pattern')">
+                        <font color="red">*Invalid Mail ID </font>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-4">
+
+                  <div class="form-outline">
+
+                    <label class="form-label">Password</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="userPassword" />
+                    <div *ngIf="edituserForm.get('userPassword')!.touched && edituserForm.get('userPassword')!.invalid">
+                      <div *ngIf="edituserForm.get('userPassword')!.hasError('required')">
+
+                        <font color="red">*Password is Required</font>
+                      </div>
+                      <div *ngIf="edituserForm.get('userPassword')!.hasError('pattern')">
+                        <font color="red">*Invalid Password</font>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="pt-1 mb-4">
+                <button class="btn btn-dark btn-lg btn-block justify-content-right" type="button"
+                  (click)="UpdateuserDetails(edituserForm.value)">Update</button>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;"><a routerLink="/AdminHome"
+                      style="color: #393f81;text-decoration: none;">Return to Home</a></p>
+                </div>
+       
+                <div class="col">
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;"><a routerLink="/UserTable" 
+                      style="color: #393f81;text-decoration: none;">Return to Table</a></p>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

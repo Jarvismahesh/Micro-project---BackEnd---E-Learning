@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid justify-content-end" style="color: rgb(255, 255, 255);">
+        Admin Online
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid" style="color: rgb(255, 255, 255);">
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+                <a class="nav-link" style="color: rgb(255, 255, 255);" routerLink="UserTable"><i class="fa fa-user"></i>
+                    &nbsp;User&nbsp;</a>
+
+                <a class="nav-link" routerLink="CourseTable" style="color: rgb(255, 255, 255);" href="#" role="button"
+                     aria-expanded="false">
+                    <i class="fa fa-book"></i> Course &nbsp;
+                </a>
+
+                <a class="nav-link" style="color: rgb(255, 255, 255);" routerLink="FileUpload"><i
+                        class="fa fa-upload"></i>&nbsp;Add Course&nbsp;</a>
+
+
+                <a class="nav-link" style="color: rgb(255, 255, 255);" routerLink="/file"><i
+                        class="fa fa-file"></i>&nbsp;View Files &nbsp;</a>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

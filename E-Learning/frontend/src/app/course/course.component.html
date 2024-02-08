@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <div class="terminal responsive">
+        <div class="justify-content-center">
+            <div class="container justify-content-center">
+                <table class="table text-center  table-striped" style="border-color:white;font-size: medium;">
+                    <tr class="table-group-divider border border-white bg-light text-black" style="height: 3em;">
+                        <th>Course Id</th>
+                        <th>Course Name</th>
+                        <th>Category</th>
+                        <th><a routerLink="/DeleteCourse" class="btn btn-danger"><i
+                                    class="fa fa-trash"></i>&ensp;Delete</a></th>
+                    </tr>
+
+                    <tr *ngFor="let cr of courseList" class="mt-5 border border-white" style="height: 5em;">
+                        <td>{{cr.courseId}}</td>
+                        <td>{{cr.courseName}}</td>
+                        <td>{{cr.courseCategory}}</td>
+                    </tr>
+
+                </table>
+                <p></p>
+                <p></p>
+            </div>
+
+            <router-outlet></router-outlet>
